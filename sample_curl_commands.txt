@@ -1,0 +1,11 @@
+# Create a new student:
+curl -X POST http://localhost:8080/grades/students -d '{"studentId": "E18155", "name": "Ridma Jayasundara", "grade": "A"}' -H "Content-Type: application/json"
+
+# Retrieve a student's grade:
+curl http://localhost:8080/grades/students/E18155
+
+# Update a student's grade:
+curl -X PUT http://localhost:8080/grades/students/E18155 -d '{"studentId": "E18155", "name": "Ridma Jayasundara", "grade": "B"}' -H "Content-Type: application/json"
+
+# Delete a student's grade
+curl -X DELETE http://localhost:8080/grades/students/E18155
